@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/bijia.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header class="header clearfix">
+    <div class="logo fl">
+      <a href="index.html">
+        <img src="./images/header_logo.png" alt="">
+      </a>
+    </div>
+    <div class="app fr">
+      <a href="#">
+        <img src="./images/header_app.png" alt="">
+      </a>
+    </div>
+  </header>
+
+  <!-- 搜索 -->
+  <section class="search clearfix">
+    <input type="text" name="search" class="searchBtn fl" placeholder="请输入您想比价的商品">
+    <input type="button" class="submitBtn fr" value="搜索">
+  </section>
+
+  <!-- 商品列表 -->
+  <section class="product-bijia">
+    <div class="product-title">
+      <!-- 挖个坑 -->
+    </div>
+    <div class="product-main">
+      <div class="desc"><h5>海信(Hisense) LED55EC520UA  55英寸 超高清4K 智能网络LED液晶电视</h5></div>
+      <div class="pic"><img src="./images/Thumb_201510001104382491.jpg" alt=""></div>
+      <div class="collect"><img src="./images/sc.jpg" alt=""></div>
+    </div>
+    <div class="tab">
+      <div class="current"><a href="#">比价购买</a></div>
+      <div><a href="#">产品参数</a></div>
+      <div><a href="#">评价(2322)</a></div>
+    </div>
+    <div class="plist clearfix">
+      <div class="jd fl">
+        <img src="./images/360.png" alt="">
+        <a href="#">京东商城</a>
+      </div>
+      <div class="gobuy fr">
+        <a href="#" class="fr">去购买</a>
+        <a href="#" class="fr">3999.00</a>
+      </div>
+    </div>
+    <div class="com-title"><p> * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p></div>
+    <div class="com-list">网友评价</div>
+  </section>
+
+  <!-- 底部 -->
+  <footer class="footer">
+    <div class="title">
+      <span>品牌排行</span>
+      <a href="#" class="more fr">
+        <img src="./images/more.png" alt="">
+      </a>
+    </div>
+    <div class="foot_top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">
+        <i></i> 返回顶部</a>
+    </div>
+    <div class="foot_bottom">
+      <p>
+        <a href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+
+  <script type="text/html" id="tmp">
+    <a href="index.html">首页></a>
+    <a href="category.html">全部分类></a>
+    <a href="#">{{result[0].category}}></a>
+    <a href="#" class="fr">筛 选</a>
+  </script>
+  <script type="text/template" id="tpl">
+    {{ each result as v i }}
+    
+    {{ /each }}
+  </script>
+
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template.js"></script>
+  <script src="./js/common/Tools.js"></script>
+  <script src="./js/common/Route.js"></script>
+  <script src="./js/bijia.js"></script>
+</body>
+
+</html>

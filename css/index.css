@@ -1,0 +1,146 @@
+@charset "UTF-8";
+@media (min-width: 320px) {
+  html {
+    font-size: 17.06666667px;
+  }
+}
+@media (min-width: 360px) {
+  html {
+    font-size: 19.2px;
+  }
+}
+@media (min-width: 375px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (min-width: 384px) {
+  html {
+    font-size: 20.48px;
+  }
+}
+@media (min-width: 400px) {
+  html {
+    font-size: 21.33333333px;
+  }
+}
+@media (min-width: 414px) {
+  html {
+    font-size: 22.08px;
+  }
+}
+@media (min-width: 424px) {
+  html {
+    font-size: 22.61333333px;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 25.6px;
+  }
+}
+@media (min-width: 540px) {
+  html {
+    font-size: 28.8px;
+  }
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 34.13333333px;
+  }
+}
+@media (min-width: 720px) {
+  html {
+    font-size: 38.4px;
+  }
+}
+@media (min-width: 750px) {
+  html {
+    font-size: 40px;
+  }
+}
+.menu {
+  margin-top: 0.5rem;
+  background-color: #fff;
+}
+.menu .menu_item {
+  width: 25%;
+  margin-top: 1.2rem;
+}
+.menu .menu_item a {
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 0.3rem;
+}
+.menu .menu_item a img {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: block;
+  margin: 0 auto;
+}
+.recommen {
+  margin-top: 0.25rem;
+}
+.recommen .title {
+  height: 1.75rem;
+  line-height: 1.75rem;
+  background-color: orange;
+  font-size: 0.75rem;
+  padding: 0 0.5rem;
+  color: #fff;
+}
+.recommen .title a {
+  display: block;
+}
+.recommen .title a img {
+  width: 1rem;
+  height: 1rem;
+}
+.recommen .product li {
+  height: 6.5rem;
+  padding: 0.5rem;
+  border-bottom: 0.025rem solid #e5e5e5;
+  background-color: #fff;
+}
+.recommen .product li img {
+  width: 5rem;
+}
+.recommen .product li .desc {
+  overflow: hidden;
+  background-color: #fff;
+  font-size: 0.65rem;
+}
+.recommen .product li .desc .info {
+  height: 3.75rem;
+}
+.recommen .product li .desc .info span {
+  color: red;
+}
+.recommen .product li .desc .time {
+  font-size: 0.5rem;
+  color: #99969b;
+}
+.recommen .product li .desc .time .comment i {
+  background: url('../images/2.svg') no-repeat;
+  width: 0.75rem;
+  height: 0.625rem;
+  display: inline-block;
+}
+.recommen .more-bar {
+  height: 2rem;
+  padding-top: 0.5rem;
+  background-color: #fff;
+}
+.recommen .more-bar a {
+  width: 17.75rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-size: 0.5rem;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  border: 0.025rem solid #dcdcdc;
+  border-radius: 0.125rem;
+  background-image: linear-gradient(#fff, #eee);
+}

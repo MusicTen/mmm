@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>慢慢买</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/category.css">
+</head>
+
+<body>
+  <!-- 头部 -->
+  <header class="header clearfix">
+    <div class="logo fl">
+      <a href="index.html">
+        <img src="./images/header_logo.png" alt="">
+      </a>
+    </div>
+    <div class="app fr">
+      <a href="#">
+        <img src="./images/header_app.png" alt="">
+      </a>
+    </div>
+  </header>
+
+  <!-- 搜索 -->
+  <section class="search clearfix">
+    <input type="text" name="search" class="searchBtn fl" placeholder="请输入您想比价的商品">
+    <input type="button" class="submitBtn fr" value="搜索">
+  </section>
+
+  <!-- 分类 -->
+  <section id="category">
+    <div class="row">
+      <ul class="category-title">
+        <!-- 挖个坑 -->
+        <!-- <li>
+          <a href="#">大 家 电</a>
+          <ul class="category-content clearfix" style="display: none">
+            <li>
+              <a href="#">电视</a>
+            </li>
+          </ul>
+        </li> -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- 底部 -->
+  <footer class="footer">
+    <div class="title">
+      <span>品牌排行</span>
+      <a href="#" class="more fr">
+        <img src="./images/more.png" alt="">
+      </a>
+    </div>
+    <div class="foot_top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#">
+        <i></i> 返回顶部</a>
+    </div>
+    <div class="foot_bottom">
+      <p>
+        <a href="#">手机APP下载</a>
+        <a href="#">慢慢买手机版</a> -- 掌上比价平台
+      </p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </footer>
+
+  <script type="text/html" id="tmp">
+    {{ each result as v i }}
+      <li>
+        <a href="#" class="title" data-id={{v.titleId}}>{{ v.title }}</a>
+        <ul class="category-content clearfix display-none">
+          <!-- 挖个坑 -->
+        </ul>
+      </li>
+    {{ /each }}
+  </script>
+  <script type="text/template" id="tpl">
+    {{ each result as v i }}
+      <li class="fl">
+        <a href="productlist.html?categoryid={{v.categoryId}}&category={{v.category}}&pageid=1" data-id="{{v.categoryId}}">{{v.category}}</a>
+      </li>
+    {{ /each }}
+  </script>
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <script src="./lib/artTemplate/template.js"></script>
+  <script src="./js/common/Tools.js"></script>
+  <script src="./js/common/Route.js"></script>
+  <script src="./js/category.js"></script>
+</body>
+
+</html>

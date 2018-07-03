@@ -1,0 +1,96 @@
+@charset "UTF-8";
+@import "variable";
+@import "adaptor";
+
+
+.menu {  
+  margin-top: 20rem/@baseSize;
+  // height: 560rem/@baseSize;
+  background-color: #fff;
+  .menu_item {
+    width: 25%;
+    margin-top: 48rem/@baseSize;
+    a {
+      width: 100%;
+      display: block;
+      text-align: center;
+      font-size: 12rem/@baseSize;
+      img {
+        width: 100rem/@baseSize;
+        height: 100rem/@baseSize;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}
+.recommen {
+  margin-top: 10rem/@baseSize;
+  .title {
+    height: 70rem/@baseSize;
+    line-height: 70rem/@baseSize;
+    background-color: orange;
+    font-size: 30rem/@baseSize;
+    padding: 0 20rem/@baseSize;
+    color: #fff;
+    a {
+      display: block;
+      img {
+        width: 40rem/@baseSize;
+        height: 40rem/@baseSize;
+      }
+    }
+  }
+  .product {
+    li {
+      height: 260rem/@baseSize;
+      padding: 20rem/@baseSize;
+      border-bottom: 1rem/@baseSize solid #e5e5e5;
+      background-color: #fff;
+      img {
+        width: 200rem/@baseSize;
+      } 
+      .desc {
+        overflow: hidden;
+        background-color: #fff;
+        font-size: 26rem/@baseSize;
+        .info {
+          height: 150rem/@baseSize;
+          span {
+            color: red;
+          }
+        }
+        .time {
+          font-size: 20rem/@baseSize;
+          color: #99969b;
+          .comment {
+            i {
+              background: url('../images/2.svg') no-repeat;
+              width: 30rem/@baseSize;
+              height: 25rem/@baseSize;
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+
+  }
+  .more-bar {
+    height: 80rem/@baseSize;
+    padding-top: 20rem/@baseSize;
+    background-color: #fff;
+    a {
+      width: 710rem/@baseSize;
+      height: 60rem/@baseSize;
+      line-height: 60rem/@baseSize;
+      font-size: 20rem/@baseSize;
+      text-align: center;
+      margin: 0 auto;
+      display: block;
+      border: 1rem/@baseSize solid #dcdcdc;
+      border-radius: 5rem/@baseSize;
+      background-image: linear-gradient(#fff,#eee);
+    }
+  }
+}

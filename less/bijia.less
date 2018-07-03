@@ -1,0 +1,114 @@
+@charset "UTF-8";
+@import "variable";
+@import "adaptor";
+.product-title {
+  height: 75rem/@baseSize;
+  line-height: 75rem/@baseSize;
+  padding-left: 10rem/@baseSize;
+  padding-right: 10rem/@baseSize;
+  border-top: 1rem/@baseSize solid #ccc;
+  background-image: linear-gradient(#fff,#ddd);
+  font-size: 24rem/@baseSize;
+  a:last-child{
+    display: block;
+    width: 125rem/@baseSize;
+    height: 55rem/@baseSize;
+    line-height: 55rem/@baseSize;
+    margin-top: 10rem/@baseSize;
+    text-align: center;
+    border-radius: 10rem/@baseSize;
+    background-image: linear-gradient(#ddd,#fff);
+    box-shadow: 1rem/@baseSize 1rem/@baseSize 1rem/@baseSize #c1c1c1;
+  }
+}
+.product-main {
+  padding:36rem/@baseSize;
+  text-align: center;
+  font-size: 30rem/@baseSize;
+  background-color: #fff;
+  position: relative;
+  .desc {
+    height: 160rem/@baseSize;
+  }
+  .pic img {
+    width: 350rem/@baseSize;
+    height: 350rem/@baseSize;
+  }
+  .collect {
+    position: absolute;
+    right: 20rem/@baseSize;
+    bottom: 20rem/@baseSize;
+    img {
+      width: 80rem/@baseSize;
+      height: 80rem/@baseSize;
+    }
+  }
+
+}
+.tab {
+  display: flex;
+  border-top: 1rem/@baseSize solid orangered;
+  border-bottom: 1rem/@baseSize solid orangered;
+  div {
+    flex: 3.33;
+    height: 70rem/@baseSize;
+    line-height: 70rem/@baseSize;
+    text-align: center;
+    background-color: orange;
+    a {
+      display: block;
+      color: #fff;
+      font-size: 24rem/@baseSize;
+    }
+
+    &:nth-child(2) {
+      border-left: 1rem/@baseSize solid orangered;
+      border-right: 1rem/@baseSize solid orangered;
+    }
+    &.current {
+      background-color: darkorange;
+    }
+  }
+}
+.plist {
+  height: 88rem/@baseSize;
+  line-height: 88rem/@baseSize;
+  .jd {
+    padding-left: 15rem/@baseSize;
+    a {
+      font-size: 30rem/@baseSize;
+    }
+  }
+  .gobuy {
+    a:first-child {
+      font-size: 24rem/@baseSize;
+      color: #fff;
+      background-color: orangered;
+      margin:19rem/@baseSize 10rem/@baseSize;
+      color: #fff;
+      width: 120rem/@baseSize;
+      height: 50rem/@baseSize;
+      line-height: 50rem/@baseSize;
+      border-radius: 10rem/@baseSize;
+      text-align: center;
+    }
+    a:last-child {
+      font-size: 24rem/@baseSize;
+      color: red;
+    }
+  }
+}
+.com-title {
+  height: 115rem/@baseSize;
+  font-size: 14rem/@baseSize;
+  border-top: 1rem/@baseSize solid #666;
+  border-bottom: 3rem/@baseSize solid #666;
+  color: #666666;
+}
+.com-list {
+  height: 66rem/@baseSize;
+  line-height: 66rem/@baseSize;
+  background-color: #dbdbdb;
+  text-align: center;
+  font-size: 30rem/@baseSize;
+}

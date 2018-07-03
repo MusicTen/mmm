@@ -1,0 +1,21 @@
+@charset "UTF-8";
+@import "variable";
+.adaptor(@value:375px){
+  @media (min-width:@value) {
+    html {
+      font-size: @value / @design * @baseSize;
+    }
+  }
+}
+.adaptor(320px);
+.adaptor(360px);
+.adaptor(375px);
+.adaptor(384px);
+.adaptor(400px);
+.adaptor(414px);
+.adaptor(424px);
+.adaptor(480px);
+.adaptor(540px);
+.adaptor(640px);
+.adaptor(720px);
+.adaptor(750px);
