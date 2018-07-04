@@ -33,31 +33,15 @@
 
   <!-- 商品列表 -->
   <section class="product-bijia">
-    <div class="product-title">
+    <!-- 挖个坑 -->
+
+    <div class="com-title"><p>* 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p></div>
+
+    <div class="com-list">网友评价</div>
+
+    <div class="com-content">
       <!-- 挖个坑 -->
     </div>
-    <div class="product-main">
-      <div class="desc"><h5>海信(Hisense) LED55EC520UA  55英寸 超高清4K 智能网络LED液晶电视</h5></div>
-      <div class="pic"><img src="./images/Thumb_201510001104382491.jpg" alt=""></div>
-      <div class="collect"><img src="./images/sc.jpg" alt=""></div>
-    </div>
-    <div class="tab">
-      <div class="current"><a href="#">比价购买</a></div>
-      <div><a href="#">产品参数</a></div>
-      <div><a href="#">评价(2322)</a></div>
-    </div>
-    <div class="plist clearfix">
-      <div class="jd fl">
-        <img src="./images/360.png" alt="">
-        <a href="#">京东商城</a>
-      </div>
-      <div class="gobuy fr">
-        <a href="#" class="fr">去购买</a>
-        <a href="#" class="fr">3999.00</a>
-      </div>
-    </div>
-    <div class="com-title"><p> * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p></div>
-    <div class="com-list">网友评价</div>
   </section>
 
   <!-- 底部 -->
@@ -84,14 +68,44 @@
   </footer>
 
   <script type="text/html" id="tmp">
-    <a href="index.html">首页></a>
-    <a href="category.html">全部分类></a>
-    <a href="#">{{result[0].category}}></a>
-    <a href="#" class="fr">筛 选</a>
+    <div class="product-title">
+      <a href="index.html">首页></a>
+      <a href="productlist.html?categoryid={{#result[0].categoryId}}&category={{category}}&pageid=1">{{category}}></a>
+      <a href="#">{{(result[0].productName).split(' ')[0]}}></a>
+      <a href="#" class="fr">筛 选</a>
+    </div>
+    <div class="product-main">
+      <div class="desc"><h5>{{#result[0].productName}}</h5></div>
+      <div class="pic">{{#result[0].productImg}}</div>
+      <div class="collect"><img src="./images/sc.jpg" alt=""></div>
+    </div>
+    <div class="tab">
+      <div class="current"><a href="#">比价购买</a></div>
+      <div><a href="#">产品参数</a></div>
+      <div><a href="#">评价({{result[0].productId}})</a></div>
+    </div>
+    <!-- <div class="plist clearfix">
+      <div class="jd fl">
+        <img src="./images/360.png" alt="">
+        <a href="#">京东商城</a>
+      </div>
+      <div class="gobuy fr clearfix">
+        <a href="#" class="fr">去购买</a>
+        <a href="#" class="fr">3999.00</a>
+      </div>
+    </div> -->
+    {{#result[0].bjShop}}
   </script>
   <script type="text/template" id="tpl">
     {{ each result as v i }}
-    
+      <div class="clearfix">
+        <span class="fl">{{v.comName}}</span>
+        <span class="fr">{{v.comTime}}</span>
+      </div>
+      <div class="com-from clearfix">
+        <span class="fr">{{v.comFrom}}</span>
+      </div>
+      <p>{{v.comContent}}</p>
     {{ /each }}
   </script>
 

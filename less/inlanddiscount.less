@@ -1,0 +1,67 @@
+@charset "UTF-8";
+@import "variable";
+@import "adaptor";
+
+header {
+  color: #fff;
+  text-align: center;
+  .back a {
+    display: block;
+    width: 100rem/@baseSize;
+    height: 100rem/@baseSize;
+    line-height: 100rem/@baseSize;
+    font-size: 70rem/@baseSize;
+    color: #fff;
+  }
+  h3 {  
+    height: 100rem/@baseSize;
+    line-height: 100rem/@baseSize;
+    overflow: hidden;
+  }
+}
+.main {
+  li {
+    float: left;
+    width: 50%;
+    background-color: #fff;
+    padding-top: 20rem/@baseSize;
+    border-bottom: 1rem/@baseSize solid #ccc;
+    // height: 530rem/@baseSize;
+    &:nth-child(odd) {
+      border-right: 1rem/@baseSize solid #ccc;
+    }
+    a {
+      display: block;
+      text-align: center;
+      font-size: 24rem/@baseSize;
+      img {
+        width: 300rem/@baseSize;
+        height: 300rem/@baseSize;
+      }
+      p {
+        margin: 20rem/@baseSize 10rem/@baseSize;
+      }
+      .productInfo {
+        font-weight: 700;
+        margin: 20rem/@baseSize 10rem/@baseSize;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /*设置成弹性盒子 */
+        display: -webkit-box;
+        /*显示的个数 */
+        -webkit-line-clamp: 2;
+        /* 属性规定框的子元素应该被水平或垂直排列。 */
+        -webkit-box-orient: vertical;
+      }
+      p:nth-of-type(1){
+        height: 60rem/@baseSize;
+        text-align: left;
+        color: orangered;
+      }
+      p:nth-of-type(2){
+        color: #666;
+      }
+    }
+
+  }
+}

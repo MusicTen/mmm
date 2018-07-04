@@ -89,21 +89,21 @@
   </script>
   <script type="text/template" id="tpl">
     {{ each result as v i }}
-    <li class="clearfix">
-      <a href="bijia.html?productid={{v.productId}}">
-        <div class="pic fl">
-          {{#v.productImg}}
-        </div>
-        <div class="desc">
-          <p class="info">{{v.productName}}</p>
-          <span>{{v.productPrice}}</span>
-          <p class="other">
-            <span>{{v.productQuote}}</span>
-            <span>{{v.productCom}}</span>
-          </p>
-        </div>
-      </a>
-    </li>
+      <li class="clearfix">
+        <a href="bijia.html?productid={{v.productId}}&category={{category}}">
+          <div class="pic fl">
+            {{#v.productImg}}
+          </div>
+          <div class="desc">
+            <p class="info">{{v.productName}}</p>
+            <span>{{v.productPrice}}</span>
+            <p class="other">
+              <span>{{v.productQuote}}</span>
+              <span>{{v.productCom}}</span>
+            </p>
+          </div>
+        </a>
+      </li>
     {{ /each }}
   </script>
 

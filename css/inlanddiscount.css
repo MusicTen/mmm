@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@media (min-width: 320px) {
+  html {
+    font-size: 17.06666667px;
+  }
+}
+@media (min-width: 360px) {
+  html {
+    font-size: 19.2px;
+  }
+}
+@media (min-width: 375px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (min-width: 384px) {
+  html {
+    font-size: 20.48px;
+  }
+}
+@media (min-width: 400px) {
+  html {
+    font-size: 21.33333333px;
+  }
+}
+@media (min-width: 414px) {
+  html {
+    font-size: 22.08px;
+  }
+}
+@media (min-width: 424px) {
+  html {
+    font-size: 22.61333333px;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 25.6px;
+  }
+}
+@media (min-width: 540px) {
+  html {
+    font-size: 28.8px;
+  }
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 34.13333333px;
+  }
+}
+@media (min-width: 720px) {
+  html {
+    font-size: 38.4px;
+  }
+}
+@media (min-width: 750px) {
+  html {
+    font-size: 40px;
+  }
+}
+header {
+  color: #fff;
+  text-align: center;
+}
+header .back a {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 1.75rem;
+  color: #fff;
+}
+header h3 {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  overflow: hidden;
+}
+.main li {
+  float: left;
+  width: 50%;
+  background-color: #fff;
+  padding-top: 0.5rem;
+  border-bottom: 0.025rem solid #ccc;
+}
+.main li:nth-child(odd) {
+  border-right: 0.025rem solid #ccc;
+}
+.main li a {
+  display: block;
+  text-align: center;
+  font-size: 0.6rem;
+}
+.main li a img {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+.main li a p {
+  margin: 0.5rem 0.25rem;
+}
+.main li a .productInfo {
+  font-weight: 700;
+  margin: 0.5rem 0.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*设置成弹性盒子 */
+  display: -webkit-box;
+  /*显示的个数 */
+  -webkit-line-clamp: 2;
+  /* 属性规定框的子元素应该被水平或垂直排列。 */
+  -webkit-box-orient: vertical;
+}
+.main li a p:nth-of-type(1) {
+  height: 1.5rem;
+  text-align: left;
+  color: orangered;
+}
+.main li a p:nth-of-type(2) {
+  color: #666;
+}

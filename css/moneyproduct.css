@@ -1,0 +1,192 @@
+@charset "UTF-8";
+@media (min-width: 320px) {
+  html {
+    font-size: 17.06666667px;
+  }
+}
+@media (min-width: 360px) {
+  html {
+    font-size: 19.2px;
+  }
+}
+@media (min-width: 375px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (min-width: 384px) {
+  html {
+    font-size: 20.48px;
+  }
+}
+@media (min-width: 400px) {
+  html {
+    font-size: 21.33333333px;
+  }
+}
+@media (min-width: 414px) {
+  html {
+    font-size: 22.08px;
+  }
+}
+@media (min-width: 424px) {
+  html {
+    font-size: 22.61333333px;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 25.6px;
+  }
+}
+@media (min-width: 540px) {
+  html {
+    font-size: 28.8px;
+  }
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 34.13333333px;
+  }
+}
+@media (min-width: 720px) {
+  html {
+    font-size: 38.4px;
+  }
+}
+@media (min-width: 750px) {
+  html {
+    font-size: 40px;
+  }
+}
+header {
+  color: #fff;
+  text-align: center;
+}
+header .back a {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 1.75rem;
+  color: #fff;
+}
+header h3 {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  overflow: hidden;
+}
+.product-content {
+  padding: 0.5rem;
+  color: #312d2d;
+  background-color: #fff;
+}
+.product-content h3 {
+  font-size: 0.75rem;
+}
+.product-content .info {
+  margin: 0.5rem 0.25rem;
+  color: #666;
+  font-size: 0.5rem;
+}
+.product-content p {
+  font-size: 0.7rem;
+}
+.product-content img:nth-of-type(1) {
+  width: 6.5rem;
+  height: 6.5rem;
+  float: right;
+}
+.product-content img:nth-of-type(2) {
+  display: block;
+  width: 14.5rem;
+  height: 14.5rem;
+  margin: 0.5rem auto;
+}
+.productCity {
+  text-align: center;
+}
+.gobuy {
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding: 0 1rem;
+}
+.gobuy a {
+  display: block;
+  background-color: orange;
+  text-align: center;
+  color: #fff;
+  border-radius: 0.25rem;
+}
+.code {
+  width: 90%;
+  display: block;
+  margin: 1rem auto;
+}
+.comArea {
+  background-color: #fff;
+  padding: 0.5rem;
+}
+.comArea .form {
+  border: 0.05rem solid #ccc;
+  position: relative;
+}
+.comArea .form textarea {
+  width: 100%;
+  height: 5.5rem;
+  border: 0.025rem solid #ccc;
+}
+.comArea .form .ctrl {
+  width: 100%;
+  height: 1.75rem;
+  background-color: #fbfbfb;
+}
+.comArea .form .ctrl .tjdp {
+  width: 5rem;
+  height: 2rem;
+  line-height: 1.75rem;
+  background-color: orangered;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  border: none;
+}
+.tit {
+  margin-bottom: 0.5rem;
+}
+.ui-border-b {
+  margin-bottom: 1rem;
+}
+.ui-border-b .userimg {
+  float: left;
+}
+.ui-border-b .userimg img {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+.ui-border-b .con {
+  overflow: hidden;
+  font-size: 0.6rem;
+}
+.ui-border-b .con .name {
+  margin: 0 0.5rem;
+}
+.ui-border-b .con .name .username {
+  float: left;
+  color: #5f87b5;
+}
+.ui-border-b .con .name .time {
+  float: right;
+  color: #ccc;
+}
+.ui-border-b .con .content {
+  margin: 0.25rem 0.5rem;
+  font-size: 0.65rem;
+  color: #666;
+}
+.ui-border-b .con .content img {
+  width: 1rem;
+  height: 1rem;
+}

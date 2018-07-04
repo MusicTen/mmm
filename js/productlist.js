@@ -1,5 +1,6 @@
 $(function(){
   var pageid = 1;
+  var category = '';
   function renderNav() {
     $.ajax({
       type: "get",
@@ -10,6 +11,7 @@ $(function(){
       dataType: 'json',
       success: function(info){
         console.log(info);
+        category = info.result[0].category;
         var htmlStr = template('tmp',info);
         $(".product-list-title").html(htmlStr);
       }
@@ -26,6 +28,7 @@ $(function(){
       dataType: 'json',
       success: function(info){
         console.log(info);
+        info.category = category;
         var htmlStr = template('tpl',info);
         $(".product-list ul").html(htmlStr);
       }
@@ -41,6 +44,7 @@ $(function(){
     }
     pageid--;
     renderProduct();
+    $("#page option").eq(pageid-1).prop("selected",true);
   })
   $('.next').click(function(){
     if(pageid>2){
@@ -49,18 +53,8 @@ $(function(){
     pageid++;
     renderProduct();
     //动态设置下拉菜单的值
-    $("#page option").eq(2).prop("selected",true);
+    $("#page option").eq(pageid-1).prop("selected",true);
   })
-
-
-
-
-
-
-
-
-
-
 
   // 获取地址栏拼接的数据函数封装
   function getSearch(keys){

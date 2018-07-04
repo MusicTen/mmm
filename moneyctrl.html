@@ -7,70 +7,50 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>慢慢买</title>
   <link rel="stylesheet" href="./css/base.css">
-  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/moneyctrl.css">
 </head>
 
 <body>
   <!-- 头部 -->
   <header class="header clearfix">
-    <div class="logo fl">
-      <a href="index.html">
-        <img src="./images/header_logo.png" alt="">
-      </a>
+    <div class="back fl">
+      <a href="index.html">&lt;</a>
     </div>
     <div class="app fr">
       <a href="#">
         <img src="./images/header_app.png" alt="">
       </a>
     </div>
+    <h3>省钱控-最新优惠</h3>
   </header>
+  <!-- 商品列表 -->
+  <section class="product-lists">
+    <div class="product-list">
+      <ul>
+        <!-- 挖个坑 -->
 
-  <!-- 搜索 -->
-  <section class="search clearfix">
-    <input type="text" name="search" class="searchBtn fl" placeholder="请输入您想比价的商品">
-    <input type="button" class="submitBtn fr" value="搜索">
-  </section>
-
-  <!-- 导航目录 -->
-  <section class="menu clearfix">
-    <!-- 挖了坑 -->
-    <!-- <div class="menu_item fl">
-      <a href="#">
-        <img src="./images/ic_pp.png" alt="">
-        <p>品牌大全</p>
-      </a>
-    </div> -->
-  </section>
-
-  <!-- 超值折扣推荐 -->
-  <section class="recommen">
-    <div class="title">
-      <span>超值折扣推荐</span>
-      <a href="#" class="more fr">
-        <img src="./images/more.png" alt="">
-      </a>
+      </ul>
     </div>
-    <div class="product">
-      <div class="list">
-        <ul>
-          <!-- 挖个坑 -->
-
-        </ul>
+    <div class="product-list-pagenitor">
+      <div>
+        <span class="last">上一页</span>
+      </div>
+      <div>
+        <select name="page" id="page">
+          <option value="page" selected>1/3</option>
+          <option value="page">2/3</option>
+          <option value="page">3/3</option>
+        </select>
+      </div>
+      <div>
+        <span class="next">下一页</span>
       </div>
     </div>
-    <div class="more-bar">
-      <a href="moneyctrl.html">更多优惠信息>></a>
-    </div>
   </section>
+
 
   <!-- 底部 -->
   <footer class="footer">
-    <div class="title">
-      <span>品牌排行</span>
-      <a href="#" class="more fr">
-        <img src="./images/more.png" alt="">
-      </a>
-    </div>
     <div class="foot_top">
       <a href="#">登录</a>
       <a href="#">注册</a>
@@ -88,18 +68,8 @@
 
   <script type="text/html" id="tmp">
     {{ each result as v i }}
-      <div class="menu_item fl {{ i > 7 ? 'display-none':''}}">
-        <a href="{{ v.titlehref }}">
-          {{ #v.img }}
-          <p>{{ v.name }}</p>
-        </a>
-      </div>
-    {{ /each }}
-  </script>
-  <script type="text/template" id="tpl">
-    {{ each result as v i }} 
-      <li class="clearfix">
-        <a href="#">
+      <li class="">
+        <a href="moneyproduct.html?productid={{v.productId}}">
           <div class="pic fl">
             {{#v.productImgSm}}
           </div>
@@ -110,7 +80,8 @@
             <p class="time">
               <span>{{v.productFrom}} | {{v.productTime}}</span>
               <span class="comment fr">
-                <i></i>{{v.productComCount}}</span>
+                <i></i>{{(v.productComCount).slice(1,-3)}}
+              </span>
             </p>
           </div>
         </a>
@@ -118,11 +89,17 @@
     {{ /each }}
   </script>
 
+  <script type="text/html" id="tpl">
+    {{ each arr as v i}}
+      <option value="page">{{v}}/{{ pages }}</option>
+    {{ /each }}
+  </script>
+
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/artTemplate/template.js"></script>
   <script src="./js/common/Tools.js"></script>
   <script src="./js/common/Route.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="./js/moneyctrl.js"></script>
 </body>
 
 </html>

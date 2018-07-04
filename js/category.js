@@ -28,9 +28,5 @@ $(function(){
         $(".category-content").eq(index).toggleClass("display-block").toggleClass("display-none").html(htmlStr);
       }
     })
-    // 点击二级分类
-    $(".category-title").on("click","")
   })
-
-
 })
