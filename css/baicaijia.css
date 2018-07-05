@@ -83,6 +83,9 @@ header h3 {
   background-color: #fff;
   position: relative;
 }
+.nav .ul_box {
+  overflow: hidden;
+}
 .nav .ul_box ul {
   width: 37.5rem;
 }
@@ -100,6 +103,9 @@ header h3 {
 .nav .ul_box ul li.current a {
   color: red;
   border-bottom: 0.075rem solid red;
+}
+.nav .ul_box ul li:-webkit-any-link {
+  cursor: pointer;
 }
 .nav .icon_search {
   width: 1.9rem;

@@ -1,5 +1,5 @@
 $(function () {
-  var pageid=1;
+  var pageid=0;
   var total = 0;
   var pagesize = 0;
   function render() {
@@ -48,24 +48,27 @@ $(function () {
     })
   }
   render();
+  
   //上一页下一页点击功能
   // var pagecurrent = $('option').find('selected').text();
   // console.log(pagecurrent)
   $('.last').click(function(){
-    if(pageid<1){
+    if(pageid<0){
       pageid=pagesize+1
     }
     pageid--;
+    console.log(pageid)
     renderProduct();
-    $("#page option").eq(pageid-1).prop("selected",true);
+    $("#page option").eq(pageid).prop("selected",true);
   })
   $('.next').click(function(){
     if(pageid>pagesize-1){
-      pageid=0
+      pageid=-1
     }
     pageid++;
+    console.log(pageid)
     renderProduct();
     //动态设置下拉菜单的值
-    $("#page option").eq(pageid-1).prop("selected",true);
+    $("#page option").eq(pageid).prop("selected",true);
   })
 })

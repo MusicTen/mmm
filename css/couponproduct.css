@@ -1,0 +1,110 @@
+@charset "UTF-8";
+@media (min-width: 320px) {
+  html {
+    font-size: 17.06666667px;
+  }
+}
+@media (min-width: 360px) {
+  html {
+    font-size: 19.2px;
+  }
+}
+@media (min-width: 375px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (min-width: 384px) {
+  html {
+    font-size: 20.48px;
+  }
+}
+@media (min-width: 400px) {
+  html {
+    font-size: 21.33333333px;
+  }
+}
+@media (min-width: 414px) {
+  html {
+    font-size: 22.08px;
+  }
+}
+@media (min-width: 424px) {
+  html {
+    font-size: 22.61333333px;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 25.6px;
+  }
+}
+@media (min-width: 540px) {
+  html {
+    font-size: 28.8px;
+  }
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 34.13333333px;
+  }
+}
+@media (min-width: 720px) {
+  html {
+    font-size: 38.4px;
+  }
+}
+@media (min-width: 750px) {
+  html {
+    font-size: 40px;
+  }
+}
+header {
+  color: #fff;
+  text-align: center;
+  background-color: #f4483e !important;
+}
+header .back a {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 1.75rem;
+  color: #fff;
+}
+header h3 {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  overflow: hidden;
+}
+.main > p {
+  line-height: 1.25rem;
+  font-size: 0.45rem;
+  text-align: center;
+  color: #666;
+}
+.main li {
+  padding: 0.5rem;
+  border-bottom: 0.025rem solid #ccc;
+  font-size: 0.5rem;
+}
+.main li > img {
+  float: left;
+  width: 5rem;
+  height: 160rem 40;
+  margin-right: 0.25rem;
+}
+.main li p:nth-of-type(2) {
+  font-weight: 700;
+  font-size: 0.6rem;
+  line-height: 1rem;
+  margin-bottom: 1.5rem;
+}
+.main li p:nth-of-type(2) img {
+  width: 1rem;
+  height: 40rem 40;
+}
+.main li span {
+  font-size: 0.45rem;
+  color: orangered;
+}

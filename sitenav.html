@@ -7,26 +7,29 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>慢慢买</title>
   <link rel="stylesheet" href="./css/base.css">
-  <link rel="stylesheet" href="./css/moneyproduct.css">
+  <link rel="stylesheet" href="./css/sitenav.css">
 </head>
 
 <body>
   <!-- 头部 -->
   <header class="header clearfix">
     <div class="back fl">
-      <a href="javascript:history.go(-1);">&lt;</a>
+      <a href="index.html">&lt;</a>
     </div>
     <div class="app fr">
       <a href="#">
         <img src="./images/header_app.png" alt="">
       </a>
     </div>
-    <h3>国内折扣</h3>
+    <h3>省钱控-最新优惠</h3>
   </header>
-  <!-- 页面主体 -->
+
   <section class="main">
-    <!-- 挖个坑 -->
+    <ul class="clearfix">
+
+    </ul>
   </section>
+
   <!-- 底部 -->
   <footer class="footer">
     <div class="foot_top">
@@ -45,25 +48,14 @@
   </footer>
 
   <script type="text/html" id="tmp">
-    <div class="product-content">
-      <h3>{{result[0].productName}}</h3>
-      <p class="info">
-        <span> {{result[0].productFrom}} </span>
-        <span> {{result[0].productTime}} </span>
-        <span> {{result[0].productTips}}</span>
-      </p>
-      {{#result[0].productImgSm}}
-      <p>{{result[0].productInfo}}</p>
-      {{#result[0].productImg2}}
-    </div>
-    <div class="productCity">{{#result[0].productCity}}</div>
-    <div class="gobuy">
-      <a href="#">前往购买</a>
-    </div>
-    <img class="code" src="./images/mmbweixin2.png" alt="">
-    <div class="comArea">
-      {{#result[0].productComment}}
-    </div>
+    {{ each result as v i }}
+      <li>
+        <a href="{{v.navHref}}">
+          <img src="{{v.navImg}}" alt="">
+          <span>{{v.navTitle}}</span>
+        </a>
+      </li>
+    {{ /each }}
   </script>
 
 
@@ -71,8 +63,8 @@
   <script src="./lib/artTemplate/template.js"></script>
   <script src="./js/common/Tools.js"></script>
   <script src="./js/common/Route.js"></script>
-  <script src="./js/common/common.js"></script>  
-  <script src="./js/moneyproducted.js"></script>
+  <script src="./js/common/common.js"></script>
+  <script src="./js/sitenav.js"></script>
 </body>
 
 </html>

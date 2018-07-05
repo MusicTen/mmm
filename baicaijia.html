@@ -27,7 +27,7 @@
   <!-- 导航 -->
   <section class="nav">
     <div class="ul_box">
-      <ul>
+      <ul class="clearfix">
         <!-- 挖了个坑 -->
       </ul>
     </div>
@@ -59,8 +59,8 @@
   </footer>
   <script type="text/html" id="tmp">
     {{each result as v i}}
-      <li class="{{i===0?'current':''}}">
-        <a href="#" data-id="{{v.titleId}}" >{{v.title}}</a>
+      <li class="{{i===0?'current':''}}" data-id="{{v.titleId}}">
+        <a href="#">{{v.title}}</a>
       </li>
     {{/each}}
   </script>
@@ -76,7 +76,6 @@
             {{#v.productHref}}
         </div>
       </li>
-
     {{ /each }}
   </script>
 
@@ -84,6 +83,7 @@
   <script src="./lib/artTemplate/template.js"></script>
   <script src="./js/common/Tools.js"></script>
   <script src="./js/common/Route.js"></script>
+  <script src="./js/common/common.js"></script>
   <script src="./js/baicaijia.js"></script>
 </body>
 

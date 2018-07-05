@@ -1,0 +1,55 @@
+@charset "UTF-8";
+@import "variable";
+@import "adaptor";
+
+header {
+  color: #fff;
+  text-align: center;
+  background-color: #f4483e !important;
+  .back a {
+    display: block;
+    width: 100rem/@baseSize;
+    height: 100rem/@baseSize;
+    line-height: 100rem/@baseSize;
+    font-size: 70rem/@baseSize;
+    color: #fff;
+  }
+  h3 {  
+    height: 100rem/@baseSize;
+    line-height: 100rem/@baseSize;
+    overflow: hidden;
+  }
+}
+.main {
+  >p {
+    line-height: 50rem/@baseSize;
+    font-size: 18rem/@baseSize;
+    text-align: center;
+    color: #666;
+  }
+  li {
+    padding: 20rem/@baseSize;
+    border-bottom: 1rem/@baseSize solid #ccc;
+    font-size: 20rem/@baseSize;
+    >img {
+      float: left;
+      width: 200rem/@baseSize;
+      height: 160rem@baseSize;
+      margin-right: 10rem/@baseSize;
+    }
+    p:nth-of-type(2) {
+      font-weight: 700;
+      font-size: 24rem/@baseSize;      
+      line-height: 40rem/@baseSize;
+      margin-bottom: 60rem/@baseSize;
+      img {
+        width: 40rem/@baseSize;
+        height: 40rem@baseSize;
+      }
+    }
+    span {
+    font-size: 18rem/@baseSize;
+      color: orangered;
+    }
+  }
+}

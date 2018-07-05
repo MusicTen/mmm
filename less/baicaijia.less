@@ -26,12 +26,15 @@ header {
   background-color: #fff;
   position: relative;
   .ul_box {
+    overflow: hidden;
     ul {
       width: 1500rem/@baseSize;
       li {
         float: left; 
+        
         padding: 0 20rem/@baseSize;
         a {
+          
           display: block;
           height: 86rem/@baseSize;
           line-height: 86rem/@baseSize;
@@ -41,6 +44,9 @@ header {
         &.current a {
           color: red;
           border-bottom: 3rem/@baseSize solid red;
+        }
+        &:-webkit-any-link {
+         cursor: pointer; 
         }
       }
     }

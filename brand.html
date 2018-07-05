@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>慢慢买</title>
   <link rel="stylesheet" href="./css/base.css">
-  <link rel="stylesheet" href="./css/category.css">
+  <link rel="stylesheet" href="./css/brand.css">
 </head>
 
 <body>
@@ -31,31 +31,29 @@
     <input type="button" class="submitBtn fr" value="搜索">
   </section>
 
-  <!-- 分类 -->
-  <section id="category">
-    <div class="row">
-      <ul class="category-title">
-        <!-- 挖个坑 -->
-        <!-- <li>
-          <a href="#">大 家 电</a>
-          <ul class="category-content clearfix" style="display: none">
-            <li>
-              <a href="#">电视</a>
-            </li>
-          </ul>
-        </li> -->
-      </ul>
-    </div>
+  <!-- 分类导航 -->
+  <section class="nav">
+    <a href="index.html">首页></a>
+    <a href="category.html">全部分类></a>
+  </section>
+  <section class="hot">热门品牌哪个更好？</section>
+  <!-- 排行 -->
+  <section class="brand_list">
+    <ul>
+      <li>
+        <a href="#">
+          <div class="fl num">1</div>
+          <div class="after info">
+            <p>格力中央空调</p>
+            <span>30天全网销售：417466件</span>
+          </div>
+        </a>
+      </li>
+    </ul>
   </section>
 
   <!-- 底部 -->
   <footer class="footer">
-    <div class="title">
-      <span>品牌排行</span>
-      <a href="#" class="more fr">
-        <img src="./images/more.png" alt="">
-      </a>
-    </div>
     <div class="foot_top">
       <a href="#">登录</a>
       <a href="#">注册</a>
@@ -71,21 +69,11 @@
     </div>
   </footer>
 
-  <script type="text/html" id="tmp">
+  <script type="text/template" id="tmp">
     {{ each result as v i }}
-      <li>
-        <a href="#" class="title" data-id={{v.titleId}}>{{ v.title }}</a>
-        <ul class="category-content clearfix display-none">
-          <!-- 挖个坑 -->
-        </ul>
-      </li>
-    {{ /each }}
-  </script>
-  <script type="text/template" id="tpl">
-    {{ each result as v i }}
-      <li class="fl">
-        <a href="productlist.html?categoryid={{v.categoryId}}&category={{v.category}}&pageid=1" data-id="{{v.categoryId}}">{{v.category}}</a>
-      </li>
+    <li>
+      <a class="title" href="brand.html?brandtitleid={{v.brandTitleId}}">{{v.brandTitle}}</a>
+    </li>
     {{ /each }}
   </script>
   <script src="./lib/jquery/jquery.min.js"></script>
@@ -93,7 +81,7 @@
   <script src="./js/common/Tools.js"></script>
   <script src="./js/common/Route.js"></script>
   <script src="./js/common/common.js"></script>
-  <script src="./js/category.js"></script>
+  <script src="./js/brand.js"></script>
 </body>
 
 </html>

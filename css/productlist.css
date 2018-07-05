@@ -126,6 +126,7 @@
   line-height: 1.75rem;
   background-color: #dbdbdb;
   border-radius: 0.25rem;
+  cursor: pointer;
 }
 .product-list-pagenitor div select {
   flex: 3.33;

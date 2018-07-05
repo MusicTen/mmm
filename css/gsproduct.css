@@ -1,0 +1,183 @@
+@charset "UTF-8";
+@media (min-width: 320px) {
+  html {
+    font-size: 17.06666667px;
+  }
+}
+@media (min-width: 360px) {
+  html {
+    font-size: 19.2px;
+  }
+}
+@media (min-width: 375px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media (min-width: 384px) {
+  html {
+    font-size: 20.48px;
+  }
+}
+@media (min-width: 400px) {
+  html {
+    font-size: 21.33333333px;
+  }
+}
+@media (min-width: 414px) {
+  html {
+    font-size: 22.08px;
+  }
+}
+@media (min-width: 424px) {
+  html {
+    font-size: 22.61333333px;
+  }
+}
+@media (min-width: 480px) {
+  html {
+    font-size: 25.6px;
+  }
+}
+@media (min-width: 540px) {
+  html {
+    font-size: 28.8px;
+  }
+}
+@media (min-width: 640px) {
+  html {
+    font-size: 34.13333333px;
+  }
+}
+@media (min-width: 720px) {
+  html {
+    font-size: 38.4px;
+  }
+}
+@media (min-width: 750px) {
+  html {
+    font-size: 40px;
+  }
+}
+header {
+  color: #fff;
+  text-align: center;
+}
+header .back a {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  font-size: 1.75rem;
+  color: #fff;
+}
+header h3 {
+  height: 2.5rem;
+  line-height: 2.5rem;
+  overflow: hidden;
+}
+.nav {
+  height: 2rem;
+  line-height: 2rem;
+  background-color: #fff;
+  border-bottom: 0.025rem solid #ccc;
+  position: relative;
+}
+.nav .nav-sub > li {
+  width: 5.5rem;
+  float: left;
+  text-align: center;
+}
+.nav .nav-sub > li i {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background: url("../images/3.svg") no-repeat center;
+  background-size: 1rem 1rem;
+}
+.nav > a {
+  display: block;
+  text-align: center;
+  padding-right: 0.25rem;
+}
+.nav > a img {
+  width: 1.5rem;
+}
+.nav .shop,
+.nav .area {
+  width: 100%;
+  position: absolute;
+  top: 2rem;
+  left: 0;
+}
+.nav .shop li,
+.nav .area li {
+  background-color: #fff;
+  position: relative;
+}
+.nav .shop li a,
+.nav .area li a {
+  display: block;
+  width: 100%;
+  border-bottom: 0.025rem solid #ccc;
+  padding-left: 1.25rem;
+}
+.main .product {
+  padding: 0.5rem;
+}
+.main .product li {
+  width: 8.75rem;
+  height: 11.25rem;
+  background-color: #fff;
+  padding: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+.main .product li:nth-child(odd) {
+  float: left;
+}
+.main .product li:nth-child(even) {
+  float: right;
+}
+.main .product li img {
+  width: 8.25rem;
+  height: 8.25rem;
+}
+.main .product li p {
+  height: 1rem;
+  line-height: 1rem;
+  font-size: 0.4rem;
+  margin: 0;
+  font-weight: 600;
+  overflow: hidden;
+  /*超出部分隐藏*/
+  white-space: nowrap;
+  /*不换行*/
+  text-overflow: ellipsis;
+  /*超出部分省略号显示*/
+}
+.main .product li span {
+  display: inline-block;
+  width: 2.25rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  font-size: 0.5rem;
+}
+.main .product li span.fl {
+  color: orangered;
+}
+.main .product li span.fr {
+  text-align: center;
+  color: #fff;
+  border-radius: 0.25rem;
+  background-color: orangered;
+}
+.icon::after {
+  content: "";
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  background: url("../images/ok.svg") no-repeat center;
+  background-size: 1rem 1rem;
+}

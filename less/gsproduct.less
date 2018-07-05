@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@import "variable";
+@import "adaptor";
+
+header {
+  color: #fff;
+  text-align: center;
+  .back a {
+    display: block;
+    width: 100rem/@baseSize;
+    height: 100rem/@baseSize;
+    line-height: 100rem/@baseSize;
+    font-size: 70rem/@baseSize;
+    color: #fff;
+  }
+  h3 {  
+    height: 100rem/@baseSize;
+    line-height: 100rem/@baseSize;
+    overflow: hidden;
+  }
+}
+.nav {
+  height: 80rem/@baseSize;
+  line-height: 80rem/@baseSize;
+  background-color: #fff;
+  border-bottom: 1rem/@baseSize solid #ccc;
+  position: relative;
+  .nav-sub>li {
+    width: 220rem/@baseSize;
+    float: left;
+    text-align: center;
+    i {
+      display: inline-block;
+      width: 40rem/@baseSize;
+      height: 40rem/@baseSize;
+      background: url("../images/3.svg") no-repeat center;
+      background-size: 40rem/@baseSize 40rem/@baseSize;
+    }
+  }
+  >a {
+    display: block;
+    text-align: center;
+    padding-right: 10rem/@baseSize;
+    img{
+      width: 60rem/@baseSize;
+      width: 60rem/@baseSize;
+    }
+  }
+  .shop,
+  .area {
+    width: 100%;
+    position: absolute;
+    top: 80rem/@baseSize;
+    left: 0;
+    li {
+      background-color: #fff;
+      position: relative;
+      a {
+        display: block;
+        width: 100%;
+        border-bottom: 1rem/@baseSize solid #ccc;
+        padding-left: 50rem/@baseSize;
+      }
+    }
+
+  }
+}
+.main {
+  .product {
+    padding: 20rem/@baseSize;
+    li {
+      width: 350rem/@baseSize;
+      height: 450rem/@baseSize;
+      background-color: #fff;
+      padding: 10rem/@baseSize;
+      margin-bottom:10rem/@baseSize;
+      &:nth-child(odd) {
+        float: left;
+      }
+      &:nth-child(even) {
+        float: right;
+      }
+      img{
+        width: 330rem/@baseSize;
+        height: 330rem/@baseSize;
+      }
+      p {
+        height: 40rem/@baseSize;
+        line-height: 40rem/@baseSize;
+        font-size: 16rem/@baseSize;
+        margin: 0;
+        font-weight: 600;
+        overflow: hidden;/*超出部分隐藏*/
+        white-space: nowrap;/*不换行*/
+        text-overflow:ellipsis;/*超出部分省略号显示*/
+      }
+      span {
+        display: inline-block;
+        width: 90rem/@baseSize;
+        height: 50rem/@baseSize;
+        line-height: 50rem/@baseSize;
+        font-size: 20rem/@baseSize;
+        &.fl {
+          color: orangered;
+        }
+        &.fr {
+          text-align: center;
+          color: #fff;
+          border-radius: 10rem/@baseSize;
+          background-color: orangered;
+        }
+      }
+    }
+  }
+}
+
+.icon::after {
+  content: "";
+  position: absolute;
+  right: 20rem/@baseSize;
+  top: 20rem/@baseSize;
+  width: 40rem/@baseSize;
+  height: 40rem/@baseSize;
+  background: url("../images/ok.svg") no-repeat center;
+  background-size: 40rem/@baseSize 40rem/@baseSize;
+}
