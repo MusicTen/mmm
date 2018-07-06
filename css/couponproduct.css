@@ -87,6 +87,8 @@ header h3 {
   padding: 0.5rem;
   border-bottom: 0.025rem solid #ccc;
   font-size: 0.5rem;
+  background-color: #fff;
+  height: 5.5rem;
 }
 .main li > img {
   float: left;
@@ -107,4 +109,51 @@ header h3 {
 .main li span {
   font-size: 0.45rem;
   color: orangered;
+}
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.modal .win {
+  width: 10rem;
+  height: 8rem;
+  position: absolute;
+  top: 7.5rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+.modal .win ul {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.modal .win ul li {
+  width: 10rem;
+  height: 8rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(20rem);
+}
+.modal .win ul li img {
+  width: 100%;
+  height: 100%;
+}
+.modal .win .fr-icon,
+.modal .win .fl-icon {
+  position: absolute;
+  top: 3rem;
+  font-size: 2.5rem;
+  color: yellow;
+}
+.modal .win .fr-icon {
+  right: -2.5rem;
+}
+.modal .win .fl-icon {
+  left: -2.5rem;
 }

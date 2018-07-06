@@ -48,10 +48,12 @@
   </footer>
 
   <script type="text/html" id="tmp">
-    {{ each result as v i }}
+    {{ each list as v i }}
       <li>
         <a href="discount.html?productid={{v.productId}}">
-          {{#v.productImg}}
+          <div data-src={{v.trueImgSrc}} class="img_box">
+              {{if i < 4}}{{#v.productImg}} {{else}} {{#v.loding}} {{/if}}
+          </div>
           <div class="productInfo">{{v.productInfo}}</div>
           <p>{{v.productPrice}}</p>
           <p>
@@ -62,10 +64,9 @@
       </li>
     {{ /each }}
   </script>
+
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/artTemplate/template.js"></script>
-  <script src="./js/common/Tools.js"></script>
-  <script src="./js/common/Route.js"></script>
   <script src="./js/common/common.js"></script>
   <script src="./js/inlanddiscount.js"></script>
 </body>

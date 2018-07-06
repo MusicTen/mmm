@@ -31,6 +31,8 @@ header {
     padding: 20rem/@baseSize;
     border-bottom: 1rem/@baseSize solid #ccc;
     font-size: 20rem/@baseSize;
+    background-color: #fff;
+    height: 220rem/@baseSize;
     >img {
       float: left;
       width: 200rem/@baseSize;
@@ -50,6 +52,53 @@ header {
     span {
     font-size: 18rem/@baseSize;
       color: orangered;
+    }
+  }
+}
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  .win {
+    width: 400rem/@baseSize;
+    height: 320rem/@baseSize;
+    position: absolute;
+    top: 300rem/@baseSize;
+    left: 50%;
+    transform: translate(-50%);
+    ul {
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      li {
+        width: 400rem/@baseSize;
+        height: 320rem/@baseSize;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(800rem/@baseSize);
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .fr-icon,
+    .fl-icon{
+      position: absolute;
+      top: 120rem/@baseSize;
+      font-size: 100rem/@baseSize;
+      color: yellow;
+    }
+    .fr-icon {
+      right: -100rem/@baseSize;
+    }
+    .fl-icon {
+      left: -100rem/@baseSize;
     }
   }
 }

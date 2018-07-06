@@ -47,12 +47,13 @@
   <script type="text/html" id="tmp">
     <div class="product-content">
       <h3>{{result[0].productName}}</h3>
+      <img src="./images/sc.jpg" alt="">
       <p class="info">
         <span> {{result[0].productFrom}} </span>
         <span> {{result[0].productTime}} </span>
         <span> {{result[0].productTips}}</span>
       </p>
-      <img src="./images/sc.jpg" alt="">
+
       <p>{{result[0].productInfo}}</p>
       <strong>{{result[0].productPrice}}</strong>
       {{#result[0].productImg}}
@@ -69,8 +70,6 @@
 
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/artTemplate/template.js"></script>
-  <script src="./js/common/Tools.js"></script>
-  <script src="./js/common/Route.js"></script>
   <script src="./js/common/common.js"></script>
   <script src="./js/discount.js"></script>
 </body>

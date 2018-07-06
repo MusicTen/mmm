@@ -106,11 +106,13 @@
       </li>
     {{ /each }}
   </script>
-
+  <script type="text/html" id="tpl2">
+    {{ each arr as v i}}
+      <option value="page">{{v}}/{{ pages }}</option>
+    {{ /each }}
+  </script>
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/artTemplate/template.js"></script>
-  <script src="./js/common/Tools.js"></script>
-  <script src="./js/common/Route.js"></script>
   <script src="./js/common/common.js"></script>
   <script src="./js/productlist.js"></script>
 </body>

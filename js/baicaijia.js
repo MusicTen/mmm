@@ -14,7 +14,7 @@ $(function(){
         var li = ul.children;
         console.log(li)
         var liWidth = li[0].offsetWidth;
-        ul.style.width = liWidth*li.length+200+'px';//li不等宽计算有误差,加上余量
+        ul.style.width = liWidth*li.length+120+'px';//li不等宽计算有误差,加上余量
         //实现导航栏区域滚动
         //1. 给ul注册touch相关的三个事件（注意清除浮动，不然触发不到touchmove事件）
         //2. 在touchstart中

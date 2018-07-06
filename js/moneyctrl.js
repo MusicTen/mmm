@@ -1,7 +1,6 @@
 $(function () {
-  var pageid=0;
-  var total = 0;
-  var pagesize = 0;
+  var pageid= 0;
+  var pages= 0;
   function render() {
     $.ajax({
       type: "get",
@@ -16,10 +15,10 @@ $(function () {
         $(".product-list ul").html(htmlStr);
 
         //获取后台返回的数据
-        total = info.totalCount;
-        pagesize = info.pagesize;
+        var total = info.totalCount;
+        var pagesize = info.pagesize;
         //根据后台返回的数据动态渲染下拉菜单
-        var pages = Math.ceil(total / pagesize);
+        pages = Math.ceil(total / pagesize);
         var obj = {pages:pages};
         var arr = [];
         for (var i = 0; i < pages; i++) {
@@ -29,7 +28,7 @@ $(function () {
         console.log(obj)
         var htmlStr2 = template("tpl", obj);
         $("#page").html(htmlStr2);
-      }
+      },
     })
   }
   function renderProduct() {
@@ -53,8 +52,8 @@ $(function () {
   // var pagecurrent = $('option').find('selected').text();
   // console.log(pagecurrent)
   $('.last').click(function(){
-    if(pageid<0){
-      pageid=pagesize+1
+    if ( pageid <= 0 ) {
+      pageid = pages
     }
     pageid--;
     console.log(pageid)
@@ -62,8 +61,8 @@ $(function () {
     $("#page option").eq(pageid).prop("selected",true);
   })
   $('.next').click(function(){
-    if(pageid>pagesize-1){
-      pageid=-1
+    if ( pageid > pages - 2 ) {
+      pageid = -1
     }
     pageid++;
     console.log(pageid)
@@ -71,4 +70,11 @@ $(function () {
     //动态设置下拉菜单的值
     $("#page option").eq(pageid).prop("selected",true);
   })
+  //点击下拉菜单中的值,渲染页面
+  $("#page").change(function(){
+    pageid = +$("option:selected").text().slice(0,-3)-1 ;
+    console.log(pageid)
+    renderProduct();
+  })
+
 })

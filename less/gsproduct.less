@@ -47,7 +47,8 @@ header {
     }
   }
   .shop,
-  .area {
+  .area,
+  .price {
     width: 100%;
     position: absolute;
     top: 80rem/@baseSize;
@@ -69,11 +70,12 @@ header {
   .product {
     padding: 20rem/@baseSize;
     li {
-      width: 350rem/@baseSize;
+      width: 48%;
       height: 450rem/@baseSize;
       background-color: #fff;
       padding: 10rem/@baseSize;
-      margin-bottom:10rem/@baseSize;
+      text-align: center;
+      margin-bottom: 20rem/@baseSize;
       &:nth-child(odd) {
         float: left;
       }
@@ -81,14 +83,14 @@ header {
         float: right;
       }
       img{
-        width: 330rem/@baseSize;
-        height: 330rem/@baseSize;
+        width: 90%;
+        margin-bottom: 10rem/@baseSize;
       }
       p {
         height: 40rem/@baseSize;
         line-height: 40rem/@baseSize;
         font-size: 16rem/@baseSize;
-        margin: 0;
+        margin-bottom: 20rem/@baseSize;
         font-weight: 600;
         overflow: hidden;/*超出部分隐藏*/
         white-space: nowrap;/*不换行*/

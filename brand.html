@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>慢慢买</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/brand.css">
 </head>
@@ -34,23 +35,33 @@
   <!-- 分类导航 -->
   <section class="nav">
     <a href="index.html">首页></a>
-    <a href="category.html">全部分类></a>
+    <a href="brandTitle.html">品牌排行></a>
   </section>
+
   <section class="hot">热门品牌哪个更好？</section>
   <!-- 排行 -->
   <section class="brand_list">
     <ul>
-      <li>
-        <a href="#">
-          <div class="fl num">1</div>
-          <div class="after info">
-            <p>格力中央空调</p>
-            <span>30天全网销售：417466件</span>
-          </div>
-        </a>
-      </li>
+      <!-- 挖个坑 -->
     </ul>
   </section>
+
+  <section class="hot">热门品牌销量排行!</section>
+  <!-- 商品列表 -->
+  <section class="product-lists">
+    <div class="product-list">
+      <ul>
+        <!-- 挖个坑 -->
+      </ul>
+    </div>
+  </section> 
+  
+  <section class="hot">热门品牌最新评论!</section>
+  <!-- 评论 -->
+  <section class="com-lists">
+    <ul>
+    </ul>
+  </section> 
 
   <!-- 底部 -->
   <footer class="footer">
@@ -71,15 +82,72 @@
 
   <script type="text/template" id="tmp">
     {{ each result as v i }}
-    <li>
-      <a class="title" href="brand.html?brandtitleid={{v.brandTitleId}}">{{v.brandTitle}}</a>
-    </li>
+      <li>
+        <a href="productlist.html?&categoryid={{v.categoryId}}&pageid=1">
+          <div class="fl num">{{i+1}}</div>
+          <div class="after info">
+            <p>{{v.brandName}}</p>
+            <span>{{v.brandInfo}}</span>
+          </div>
+        </a>
+      </li>
     {{ /each }}
   </script>
+  <script type="text/template" id="tpl">
+    {{ each result as v i }}
+      <li class="clearfix">
+        <a href="bijia.html?productid={{v.productId}}">
+          <div class="pic fl">
+            {{#v.productImg}}
+          </div>
+          <div class="desc">
+            <p class="info">{{v.productName}}</p>
+            <p class="price">
+              <span class="start fr">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+              </span>
+              <span>{{v.productPrice}}</span></p>
+            <p class="other">
+              <span>{{v.productQuote}}</span>
+              <span>{{v.productCom}}</span>
+            </p>
+          </div>
+        </a>
+      </li>
+    {{ /each }}
+  </script>
+  <script type="text/template" id="com">
+    {{ each result as v i }}
+      <li>
+        <a href="bijia.html?productid={{v.productId}}&category=电视">
+          <div class="top">
+            <img class="fl" src="./images/Thumb_201510001104382491.jpg" alt="">
+            <p>乐视TV(Letv) 超3 X55 55英寸智能LED液晶 超级电视 4K超清电视</p>
+          </div>
+          <div class="down">
+            <p class="name">
+              <span class="fr">2016/2/18</span>
+              <span>g***n：</span>
+              <span class="start">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star-half-o"></i>
+              </span>
+            </p>
+            <p>双12抢的单，14号收到货，速度奇快。特意使用了10来天，对产品有了一点的操控和了解，才来评价! 超级电视超级之处：1，颜值高，整体简洁，窄边框，前面板只有一个Letv的logo指示灯，无其他按键占用面板空间，外观简洁大气，边框做工精细。 2、操作简便，并可启用语音遥控，网络接入速度快，操作系统简洁，一目了然，运行速度相当流畅。 3、内容：乐视自家的视频APP内容相当丰富，科学归类，能快速找到想看的节目，第三方软件安装也方便，即使未登陆乐视会员，也能观看到高清影片及电视直播。 超级电视相对其他电视，有着很大的竞争优势。买这个电视，物有所值 评论发布自 购买自：乐视tv旗舰店</p>
+          </div>
+        </a>
+      </li>
+    {{ /each }}
+  </script>
+
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/artTemplate/template.js"></script>
-  <script src="./js/common/Tools.js"></script>
-  <script src="./js/common/Route.js"></script>
   <script src="./js/common/common.js"></script>
   <script src="./js/brand.js"></script>
 </body>

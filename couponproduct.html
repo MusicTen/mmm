@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>慢慢买</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/base.css">
   <link rel="stylesheet" href="./css/couponproduct.css">
 </head>
@@ -14,7 +15,7 @@
   <!-- 头部 -->
   <header class="header clearfix">
     <div class="back fl">
-      <a href="javascript:history.go(-1);">&lt;</a>
+      <a href="javascript:history.go(-1);"><i class="fa fa-chevron-left"></i></a>
     </div>
     <div class="app fr">
       <a href="#">
@@ -24,7 +25,6 @@
     <h3>优惠券</h3>
   </header>
 
- 
   <!-- 页面主体 -->
   <section class="main">
     <p>--点餐前出示手机中的优惠券，即可享受优惠--</p>
@@ -49,22 +49,36 @@
       <p>m.manmanbuy.com</p>
     </div>
   </footer>
+
+  <!-- 模态框 -->
+  <div class="modal" style="display:none">
+    <div class="win">
+      <ul>
+        <!-- 坑 -->
+      </ul>
+      <i class="fl-icon fa fa-angle-left"></i>
+      <i class="fr-icon fa fa-angle-right"></i>
+    </div>
+  </div>
+
   <script type="text/html" id="tmp">
     {{each result as v i}}
       <li>
         {{#v.couponProductImg}}
         <p>{{v.couponProductName}}</p>
-        <p>{{v.couponProductPrice}}<a href="#" data-id="{{v.couponProductId}}"><img class="fr" src="./images/arrow-right.svg" alt=""></a></p>
+        <p>{{v.couponProductPrice}}<a href="#" data-id="{{v.couponProductId}}"><img class="forBig fr" src="./images/arrow-right.svg" alt=""></a></p>
         <span>{{v.couponProductTime}}</span>
       </li>
     {{/each}}
   </script>
-
-
+  <script type="text/html" id="tpl">
+    {{each result as v i}}
+      <li>{{#v.couponProductImg}}</li>
+    {{/each}}
+  </script>
+  
   <script src="./lib/jquery/jquery.min.js"></script>
   <script src="./lib/artTemplate/template.js"></script>
-  <script src="./js/common/Tools.js"></script>
-  <script src="./js/common/Route.js"></script>
   <script src="./js/common/common.js"></script>
   <script src="./js/couponproduct.js"></script>
 </body>

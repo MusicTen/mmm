@@ -50,11 +50,18 @@ $(function(){
   //二级菜单显示
   $('.nav-sub li:first-child').click(function(){
     $('.area').slideUp();
+    $('.price').slideUp();
     $('.shop').slideToggle();
   });
   $('.nav-sub li:nth-child(2)').click(function(){
     $('.shop').slideUp();
+    $('.price').slideUp();
     $('.area').slideToggle();
+  });
+  $('.nav-sub li:nth-child(3)').click(function(){
+    $('.shop').slideUp();
+    $('.area').slideUp();
+    $('.price').slideToggle();
   });
   //点击二级菜单,加对勾(icon类),获取id重新渲染页面
   $('.shop').on('click','li',function(){

@@ -93,8 +93,9 @@ header h3 {
   font-size: 0.7rem;
 }
 .product-content img:nth-of-type(1) {
-  width: 6.5rem;
-  height: 6.5rem;
+  width: 5.5rem;
+  height: 5.5rem;
+  margin-left: 0.5rem;
   float: right;
 }
 .product-content img:nth-of-type(2) {

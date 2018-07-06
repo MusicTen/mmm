@@ -104,19 +104,22 @@ header h3 {
   width: 1.5rem;
 }
 .nav .shop,
-.nav .area {
+.nav .area,
+.nav .price {
   width: 100%;
   position: absolute;
   top: 2rem;
   left: 0;
 }
 .nav .shop li,
-.nav .area li {
+.nav .area li,
+.nav .price li {
   background-color: #fff;
   position: relative;
 }
 .nav .shop li a,
-.nav .area li a {
+.nav .area li a,
+.nav .price li a {
   display: block;
   width: 100%;
   border-bottom: 0.025rem solid #ccc;
@@ -126,11 +129,12 @@ header h3 {
   padding: 0.5rem;
 }
 .main .product li {
-  width: 8.75rem;
+  width: 48%;
   height: 11.25rem;
   background-color: #fff;
   padding: 0.25rem;
-  margin-bottom: 0.25rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 .main .product li:nth-child(odd) {
   float: left;
@@ -139,14 +143,14 @@ header h3 {
   float: right;
 }
 .main .product li img {
-  width: 8.25rem;
-  height: 8.25rem;
+  width: 90%;
+  margin-bottom: 0.25rem;
 }
 .main .product li p {
   height: 1rem;
   line-height: 1rem;
   font-size: 0.4rem;
-  margin: 0;
+  margin-bottom: 0.5rem;
   font-weight: 600;
   overflow: hidden;
   /*超出部分隐藏*/
