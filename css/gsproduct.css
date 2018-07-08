@@ -142,9 +142,13 @@ header h3 {
 .main .product li:nth-child(even) {
   float: right;
 }
-.main .product li img {
+.main .product li .pic {
   width: 90%;
+  height: 7.5rem;
   margin-bottom: 0.25rem;
+}
+.main .product li .pic img {
+  width: 100%;
 }
 .main .product li p {
   height: 1rem;

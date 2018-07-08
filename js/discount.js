@@ -3,7 +3,7 @@ $(function(){
   function render() {
     $.ajax({
       type: "get",
-      url: "http://192.168.16.81:9090/api/getdiscountproduct",
+      url: "http://127.0.0.1:9090/api/getdiscountproduct",
       data: {
         productid: getSearch('productid')
       },

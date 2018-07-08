@@ -32,12 +32,16 @@ header {
     }
     a {
       display: block;
-      text-align: center;
       font-size: 24rem/@baseSize;
-      img {
-        width: 300rem/@baseSize;
+      .img_box {
         height: 300rem/@baseSize;
+        text-align: center;
+        img {
+          width: 300rem/@baseSize;
+          height: 300rem/@baseSize;
+        }
       }
+
       p {
         margin: 20rem/@baseSize 10rem/@baseSize;
       }
@@ -55,11 +59,11 @@ header {
       }
       p:nth-of-type(1){
         height: 60rem/@baseSize;
-        text-align: left;
         color: orangered;
       }
       p:nth-of-type(2){
         color: #666;
+        text-align: center;
       }
     }
 

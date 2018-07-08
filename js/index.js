@@ -2,7 +2,7 @@ $(function(){
   function render() {
     $.ajax({
       type: "get",
-      url: "http://192.168.16.81:9090/api/getindexmenu",
+      url: "http://127.0.0.1:9090/api/getindexmenu",
       dataType: "json",
       success: function(info){
         console.log(info);
@@ -12,7 +12,7 @@ $(function(){
     })
     $.ajax({
       type: "get",
-      url: "http://192.168.16.81:9090/api/getmoneyctrl",
+      url: "http://127.0.0.1:9090/api/getmoneyctrl",
       dataType: "json",
       success: function(info){
         console.log(info);
@@ -23,7 +23,7 @@ $(function(){
   }
   render();
   $(".menu").on("click","div:nth-child(8) a",function(){
-    console.log(112)
-    $(".menu_item:nth-child(n+9)").toggleClass("display-none").toggleClass("display-block");
+    // $(".menu_item:nth-child(n+9)").toggleClass("display-none").toggleClass("display-block");
+    $(".menu_item:nth-child(n+9)").slideToggle();
   })
 })

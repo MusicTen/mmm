@@ -2,7 +2,7 @@ $(function(){
   function renderShop() {
     $.ajax({
       type: "get",
-      url: "http://192.168.16.81:9090/api/getgsshop",
+      url: "http://127.0.0.1:9090/api/getgsshop",
       dataType: 'json',
       success: function (info) {
         console.log(info);
@@ -15,7 +15,7 @@ $(function(){
   function renderArea() {
     $.ajax({
       type: "get",
-      url: "http://192.168.16.81:9090/api/getgsshoparea",
+      url: "http://127.0.0.1:9090/api/getgsshoparea",
       dataType: 'json',
       success: function (info) {
         console.log(info);
@@ -27,7 +27,7 @@ $(function(){
   function renderProduct(shopid,areaid) {
     $.ajax({
       type: "get",
-      url: "http://192.168.16.81:9090/api/getgsproduct",
+      url: "http://127.0.0.1:9090/api/getgsproduct",
       data: {
         shopid : shopid || 1,
         areaid : areaid || 1 

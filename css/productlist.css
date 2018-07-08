@@ -85,7 +85,10 @@
   border-bottom: 0.025rem solid #e5e5e5;
   background-color: #fff;
 }
-.product-list li img {
+.product-list li .pic {
+  width: 5rem;
+}
+.product-list li .pic img {
   width: 5rem;
   height: 5rem;
 }

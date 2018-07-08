@@ -2,7 +2,7 @@ $(function(){
   function renderTitle() {
     $.ajax({
       type: "get",
-      url: "http://192.168.16.81:9090/api/getbaicaijiatitle",
+      url: "http://127.0.0.1:9090/api/getbaicaijiatitle",
       dataType: 'json',
       success: function(info){
         console.log(info);
@@ -11,10 +11,14 @@ $(function(){
 
         //数据请求成功后动态设置ul的宽度
         var ul = document.querySelector(".nav ul");
-        var li = ul.children;
-        console.log(li)
+        var li = document.querySelectorAll(".nav ul li");
+        console.log(li);
+        var ulWidth = 0;
+        li.forEach(function(v,i){
+          ulWidth += v.offsetWidth;
+        });
         var liWidth = li[0].offsetWidth;
-        ul.style.width = liWidth*li.length+120+'px';//li不等宽计算有误差,加上余量
+        ul.style.width = ulWidth + 60 + 'px';//li不等宽计算有误差,加上余量
         //实现导航栏区域滚动
         //1. 给ul注册touch相关的三个事件（注意清除浮动，不然触发不到touchmove事件）
         //2. 在touchstart中
@@ -60,7 +64,7 @@ $(function(){
   function renderProducts(titleid) {
     $.ajax({
       type: "get",
-      url: "http://192.168.16.81:9090/api/getbaicaijiaproduct",
+      url: "http://127.0.0.1:9090/api/getbaicaijiaproduct",
       data: {
         titleid : titleid
       },

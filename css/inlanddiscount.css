@@ -88,10 +88,13 @@ header h3 {
 }
 .main li a {
   display: block;
-  text-align: center;
   font-size: 0.6rem;
 }
-.main li a img {
+.main li a .img_box {
+  height: 7.5rem;
+  text-align: center;
+}
+.main li a .img_box img {
   width: 7.5rem;
   height: 7.5rem;
 }
@@ -112,9 +115,9 @@ header h3 {
 }
 .main li a p:nth-of-type(1) {
   height: 1.5rem;
-  text-align: left;
   color: orangered;
 }
 .main li a p:nth-of-type(2) {
   color: #666;
+  text-align: center;
 }

@@ -2,7 +2,7 @@ $(function(){
   function render(){
     $.ajax({
       type: "get",
-      url: "http://192.168.16.81:9090/api/getcategorytitle",
+      url: "http://127.0.0.1:9090/api/getcategorytitle",
       dataType: 'json',
       success: function(info) {
         console.log(info);
@@ -25,7 +25,8 @@ $(function(){
         var index = info.result[0].titleId
         var htmlStr = template("tpl",info);
         // .siblings().addClass("display-none")
-        $(".category-content").eq(index).toggleClass("display-block").toggleClass("display-none").html(htmlStr);
+        // $(".category-content").eq(index).toggleClass("display-block").toggleClass("display-none").html(htmlStr);
+        $(".category-content").eq(index).html(htmlStr).slideToggle();
       }
     })
   })

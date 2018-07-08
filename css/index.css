@@ -105,7 +105,10 @@
   border-bottom: 0.025rem solid #e5e5e5;
   background-color: #fff;
 }
-.recommen .product li img {
+.recommen .product li .pic {
+  width: 5rem;
+}
+.recommen .product li .pic img {
   width: 5rem;
   padding-right: 0.125rem;
 }

@@ -3,7 +3,7 @@ $(function(){
   function renderBrand() {
     $.ajax({
       type: "get",
-      url: "http://192.168.16.81:9090/api/getbrand",
+      url: "http://127.0.0.1:9090/api/getbrand",
       data: {
         brandtitleid: getSearch("brandtitleid")
       },
@@ -19,7 +19,7 @@ $(function(){
   function renderProductlist() {
     $.ajax({
       type: "get",
-      url: "http://192.168.16.81:9090/api/getbrandproductlist",
+      url: "http://127.0.0.1:9090/api/getbrandproductlist",
       data: {
         brandtitleid: getSearch('brandtitleid'),
         pagesize: 4
@@ -40,7 +40,7 @@ $(function(){
   function renderProductcom() {
     $.ajax({
       type: "get",
-      url: "http://192.168.16.81:9090/api/getproductcom",
+      url: "http://127.0.0.1:9090/api/getproductcom",
       data: {
         productid: productid
       },

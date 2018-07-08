@@ -89,7 +89,7 @@
   <script type="text/html" id="tmp">
     {{ each result as v i }}
       <div class="menu_item fl {{ i > 7 ? 'display-none':''}}">
-        <a href="{{ v.titlehref }}">
+        <a href="{{ i===7?'javascript:;':v.titlehref }}">
           {{ #v.img }}
           <p>{{ v.name }}</p>
         </a>

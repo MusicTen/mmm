@@ -5,7 +5,7 @@ $(function(){
   function renderNav() {
     $.ajax({
       type: "get",
-      url: "http://192.168.16.81:9090/api/getcategorybyid",
+      url: "http://127.0.0.1:9090/api/getcategorybyid",
       data: {
         categoryid: getSearch('categoryid')
       },
@@ -21,7 +21,7 @@ $(function(){
   function render() {
     $.ajax({
       type: "get",
-      url: "http://192.168.16.81:9090/api/getproductlist",
+      url: "http://127.0.0.1:9090/api/getproductlist",
       data: {
         categoryid: getSearch('categoryid'),
         pageid: pageid
@@ -51,7 +51,7 @@ $(function(){
   function renderProduct() {
     $.ajax({
       type: "get",
-      url: "http://192.168.16.81:9090/api/getproductlist",
+      url: "http://127.0.0.1:9090/api/getproductlist",
       data: {
         categoryid: getSearch('categoryid'),
         pageid: pageid
