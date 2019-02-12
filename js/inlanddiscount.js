@@ -66,7 +66,6 @@ $(function(){
                 }
             }
 
-
             //'展示图片'函数, 将元素的src替换为自定义属性data-src(真正的图片地址);
             function showImg ($node){
                 $node.find("img").attr("src",$node.data("src"));
